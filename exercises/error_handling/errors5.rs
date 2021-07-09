@@ -4,31 +4,30 @@
 // It won't compile right now! Why?
 // Execute `rustlings hint errors5` for hints!
 
-// I AM NOT DONE
-
+use error::Error;
 use std::error;
 use std::fmt;
 use std::num::ParseIntError;
 
-type Result<T, E> = std::result::Result<T, Box<dyn E>>;
+//type Result<T, E> = std::result::Result<T, Box<dyn E>>;
 // TODO: update the return type of `main()` to make this compile.
-fn main() -> Result<(), ParseIntError> {
+fn main() -> Result<(), Box<dyn Error>> {
     let pretend_user_input = "42";
     let x: i64 = pretend_user_input.parse()?;
     println!("output={:?}", PositiveNonzeroInteger::new(x)?);
     Ok(())
 }
 
-// impl From<CreationError> for ParseIntError{
-//     fn from(e: CreationError) -> ParseIntError{
+// impl From<CreationError> for ParseIntError {
+//     fn from(e: CreationError) -> ParseIntError {
 //         return ParseIntError::CreationError(e);
 //     }
 // }
 
-// impl From<ParseIntError> for CreationError{
-// 	fn from(e: ParseIntError) -> CreationError{
-// 		return CreationError::ParseIntError(e);
-// 	}
+// impl From<ParseIntError> for CreationError {
+//     fn from(e: ParseIntError) -> CreationError {
+//         return CreationError::ParseIntError(e);
+//     }
 // }
 // Don't change anything below this line.
 
