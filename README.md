@@ -1,3 +1,3 @@
 ### Rustling Solutions
 
-Solutions to rustlings(url)[https://github.com/rust-lang/rustlings/]
+Solutions to [rustlings](https://github.com/rust-lang/rustlings/)
